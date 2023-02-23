@@ -24,10 +24,10 @@ def make_backup(source_path: str, target_path: str) -> None:
         for folder, _, files in os.walk(source_path):
             for file in files:
                 src_file_path = os.path.join(folder, file)
-                arc_file_path = os.path.relpath(os.path.join(folder, file), source_path)
+                rel_file_path = os.path.relpath(src_file_path, source_path)
                 target_zip_file.write(
                     src_file_path,
-                    arc_file_path,
+                    rel_file_path,
                     compress_type=zipfile.ZIP_DEFLATED,
                 )
 
