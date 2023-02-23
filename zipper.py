@@ -1,4 +1,6 @@
-﻿"""
+﻿#!/usr/bin/env python3
+
+"""
 Archives a directory to another directory.
 """
 
